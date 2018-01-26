@@ -1,0 +1,12 @@
+[submodule "src/vendor/src/github.com/dop251/goja"]
+	path = src/vendor/src/github.com/dop251/goja
+	url = https://github.com/relationsone/goja.git
+[submodule "src/vendor/src/github.com/relationsone/gomini"]
+	path = src/vendor/src/github.com/relationsone/gomini
+	url = https://github.com/relationsone/gomini.git
+[submodule "src/github.com/dop251/goja"]
+	path = src/github.com/dop251/goja
+	url = https://github.com/relationsone/goja.git
+[submodule "src/github.com/relationsone/gomini"]
+	path = src/github.com/relationsone/gomini
+	url = https://github.com/relationsone/gomini.git

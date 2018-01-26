@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "target": "es5",
+    "noImplicitAny": false,
+    "alwaysStrict": true,
+    "diagnostics": true,
+    "baseUrl": "./scripting",
+    "typeRoots": [
+      "@types/"
+    ],
+    "paths": {
+      "*": [
+        "@types/",
+        "scripts/*"
+      ]
+    }
+  }
+}
