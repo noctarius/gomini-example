@@ -6,6 +6,7 @@ import (
 	"github.com/dop251/goja"
 	"net/http"
 	"strconv"
+	"github.com/go-errors/errors"
 )
 
 type requestHandler func(context *goja.Object) error
@@ -89,6 +90,18 @@ func (hkm *httpKernelModule) jsRegisterRequestHandler(bundle gomini.Bundle) func
 
 			method := hkm.findRequestMethodByName(context.Request().Method)
 			if method.handling(requestMethod) {
+				defer func() {
+					if x := recover(); x != nil {
+						switch t := x.(type) {
+						case *goja.Exception:
+							context.String(http.StatusInternalServerError, t.String())
+						case error:
+							context.String(http.StatusInternalServerError, errors.New(t).ErrorStack())
+						default:
+							context.NoContent(http.StatusInternalServerError)
+						}
+					}
+				}()
 				return handler(jsContext)
 			}
 
@@ -142,6 +155,10 @@ func (hkm *httpKernelModule) jsResponse(bundle gomini.Bundle, context echo.Conte
 
 	jsResponse.Set("respondWithString", func(responseCode ResponseCode, content string) error {
 		return context.String(int(responseCode), content)
+	})
+
+	jsResponse.Set("respondWithError", func(code ResponseCode) error {
+		return context.NoContent(int(code))
 	})
 
 	return jsResponse

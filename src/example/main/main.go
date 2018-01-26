@@ -44,6 +44,10 @@ func main() {
 		log.Fatal(err)
 	}
 
+	if err := kernel.LoadKernelModule(example.NewMeanKernelModule()); err != nil {
+		log.Fatal(err)
+	}
+
 	if err := kernel.EntryPoint("main.ts"); err != nil {
 		log.Fatal(err)
 	}

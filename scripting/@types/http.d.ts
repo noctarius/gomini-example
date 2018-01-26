@@ -26,6 +26,8 @@ declare module "http" {
 
     export interface Response {
         respondWithString(responseCode: ResponseCode, content: string): Error
+
+        respondWithError(responseCode: ResponseCode): Error
     }
 
     export interface RequestContext {
