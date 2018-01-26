@@ -2,6 +2,7 @@ package example
 
 import (
 	"github.com/relationsone/gomini"
+	"fmt"
 )
 
 type meanKernelModule struct {
@@ -32,6 +33,7 @@ func (*meanKernelModule) SecurityInterceptor() gomini.SecurityInterceptor {
 func (*meanKernelModule) ExtensionBinder() gomini.ExtensionBinder {
 	return func(bundle gomini.Bundle, moduleBuilder gomini.ModuleBuilder) {
 		moduleBuilder.DefineFunction("fail", func(callback func()) {
+			fmt.Println("meanKernelModule: Just a quick go function call and going back into JS...")
 			callback()
 		}).EndModule()
 	}
