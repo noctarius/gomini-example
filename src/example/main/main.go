@@ -30,10 +30,11 @@ func main() {
 	basePath := filepath.Join(base, "scripting", "scripts")
 	typesPath := filepath.Join(base, "scripting", "@types")
 	cachePath := filepath.Join(base, "target", "cache")
+	appsPath := filepath.Join(base, "apps")
 
 	os.MkdirAll(cachePath, os.ModePerm)
 
-	kernelfs := buildKernelFilesystem(basePath, typesPath, cachePath)
+	kernelfs := buildKernelFilesystem(basePath, typesPath, appsPath, cachePath)
 
 	kernel, err := gomini.NewScriptKernel(afero.NewOsFs(), kernelfs, true)
 	if err != nil {
@@ -48,7 +49,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if err := kernel.EntryPoint("main.ts"); err != nil {
+	if err := kernel.EntryPoint("/main.ts"); err != nil {
 		log.Fatal(err)
 	}
 
@@ -61,7 +62,7 @@ func main() {
 	}
 }
 
-func buildKernelFilesystem(basePath, typesPath, cachePath string) afero.Fs {
+func buildKernelFilesystem(basePath, typesPath, appsPath, cachePath string) afero.Fs {
 	// Base filesystem, delegating to real filesystem
 	osfs := afero.NewOsFs()
 
@@ -79,6 +80,10 @@ func buildKernelFilesystem(basePath, typesPath, cachePath string) afero.Fs {
 
 	// Mount the types filesystem into the root fs
 	kernelfs.Mount(typesfs, "/kernel/@types")
+
+	// External apps fs
+	appsfs := afero.NewBasePathFs(rofs, appsPath)
+	kernelfs.Mount(appsfs, "/kernel/apps")
 
 	// Writable caching filesystem (for caching transpiled scripts)
 	cachefs := afero.NewBasePathFs(osfs, cachePath)

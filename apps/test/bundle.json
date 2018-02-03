@@ -1,0 +1,8 @@
+{
+  "id": "03642223-b775-4a4c-b2d3-45ed75286222",
+  "name": "test-bundle",
+  "entrypoint": "/mybundle.ts",
+  "privileges": [
+    "PRIVILEGE_HTTP"
+  ]
+}
