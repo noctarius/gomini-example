@@ -1,0 +1,224 @@
+#!/bin/bash
+
+spinner() {
+  spin='-\|/'
+
+i=0
+  while kill -0 $1 2>/dev/null
+  do
+    i=$(( (i+1) %4 ))
+    printf "\b${spin:$i:1}"
+    sleep .1
+  done
+}
+
+detect_os() {
+  uname=`uname`
+  if [[ "$uname" == "Darwin" ]]; then
+    echo "darwin"
+  elif [[ "$uname" == "Linux" ]]; then
+    echo "linux"
+  else
+    echo "linux"
+  fi
+}
+
+execute() {
+  echo "Executing: $2"
+  echo
+  echo -n "$1  "
+  cmd="$2"
+  if [ "$VERBOSE" == false ]; then
+    eval $cmd 1>/dev/null 2>/dev/null &
+    pid=$!
+    spinner $pid &
+    if ! wait $pid; then
+      printf "\bfailed.\n"
+      echo "Restart the command in verbose mode: $BOOTSTRAP_COMMAND -v"
+      exit 1
+    fi
+    printf "\bdone."
+
+  else
+    echo
+    eval $cmd
+    if [ ! $? -eq 0 ]; then
+      echo "Operation failed"
+      exit 1
+    fi
+  fi
+}
+
+LD_FLAGS="-ldflags=\"-s -w\""
+SRC_PATH="$PWD"
+P_PATH="$SRC_PATH/"
+
+PACK=true
+VERBOSE=false
+TRACE=false
+CLEAN=false
+CLEAN_DEPS=false
+UPDATING=false
+
+C_OPTS=""
+P_OPTS="-q"
+CGO_LIBS="CGO_LDFLAGS=-L/usr/local/Cellar/zbar/0.10_4/lib"
+CGO_HEADERS="CGO_CFLAGS=-I/usr/local/Cellar/zbar/0.10_4/include"
+ARCH="amd64"
+OS=$(detect_os)
+OUT="example"
+TARGET="$PWD/target"
+TAGS=""
+GO_BINARY="go"
+
+BOOTSTRAP_COMMAND="$0 $@"
+
+i=0
+params=("$@")
+for arg in "$@"; do
+  case "$arg" in
+    --help|-h )
+      echo "Usage: $0 [ posix or GNU style options ]"
+      echo -e "-d|--debug\t\t\t\tEnables debug symbols"
+      echo -e "-f|--force\t\t\t\tForces recompilation of already compiled packages"
+      echo -e "-np|--no-pack\t\t\t\tPrevents UPX from packaging the resulting executable"
+      echo -e "-a|--arch\033[3m[=]target_arch\033[0m\t\t\tSelect the target architecture (amd64, arm)"
+      echo -e "--os\033[3m[=]target_os\033[0m\t\t\tSelect the target operating system (linux, darwin)"
+      echo -e "-v|--verbose\t\t\t\tEnable verbose mode"
+      echo -e "-vv|--extra-verbose\t\t\tEnable extra verbose mode (show go compile commands)"
+      echo -e "-o|--out\033[3m[=]filename\033[0m\t\t\tSelect the output filename of the compilation"
+      echo -e "-t|--target\033[3m[=]directory\033[0m\t\t\tSelect the output directory of the compilation"
+      echo -e "-c|--clean\t\t\t\tCleans the target directory before compilation"
+      echo -e "-cp|--clean-deps\t\t\tCleans the dependency directory before compilation (enforces re-download)"
+      echo -e "-u|--update\t\t\tDownload and update dependencies"
+      echo -e "--race\t\t\tRace condition testing"
+      exit 0
+      ;;
+    --debug|-d )
+      LD_FLAGS=""
+      ;;
+    --update|-u )
+      UPDATING=true
+      ;;
+    --force|-f )
+      C_OPTS="-a $C_OPTS"
+      ;;
+    --no-pack|-np )
+      PACK=false
+      ;;
+    --arch=*|-a=* )
+      ARCH=`echo $arg | sed 's/[-a-zA-Z0-9]*=//'`
+      ;;
+    --arch|-a )
+      ((i++))
+      ARCH="${params[$i]}"
+      shift
+      ;;
+    --os=* )
+      OS=`echo $arg | sed 's/[-a-zA-Z0-9]*=//'`
+      ;;
+    --os )
+      ((i++))
+      OS="${params[$i]}"
+      shift
+      ;;
+    --verbose|-v )
+      VERBOSE=true
+      ;;
+    --extra-verbose|-vv )
+      VERBOSE=true
+      V_FLAG="-x"
+      ;;
+    --out=*|-o=* )
+      OUT=`echo $arg | sed 's/[-a-zA-Z0-9]*=//'`
+      ;;
+    --out|-o )
+      ((i++))
+      OUT="${params[$i]}"
+      shift
+      ;;
+    --target=*|-t=* )
+      TARGET=`echo $arg | sed 's/[-a-zA-Z0-9]*=//'`
+      ;;
+    --target|-t )
+      ((i++))
+      TARGET="${params[$i]}"
+      shift
+      ;;
+    --clean|-c )
+      CLEAN=true
+      ;;
+    --clean-deps|-cp )
+      CLEAN_DEPS=true
+      ;;
+    --zbar-dir=*|-zd=* )
+      ZBAR_DIR=`echo $arg | sed 's/[-a-zA-Z0-9]*=//'`
+      CGO_HEADERS="CGO_CFLAGS=-I$ZBAR_DIR/include"
+      CGO_LIBS="CGO_LDFLAGS=-L$ZBAR_DIR/lib"
+      ;;
+    --trace )
+      C_OPTS="$C_OPTS -x"
+      ;;
+    --release )
+      TAGS="$TAGS -release"
+      ;;
+    --race )
+      RACE=true
+      ;;
+    --go=* )
+      GO_BINARY=`echo $arg | sed 's/[-a-zA-Z0-9\/-\ ]*=//'`
+      ;;
+  esac
+  ((i++))
+done
+
+C_OPTS="-buildmode=exe $LD_FLAGS $C_OPTS"
+BUILD="$TARGET/$OUT"
+BTAGS="-tags '$TAGS'"
+
+echo "################### Compilation ###################"
+echo "GO Compilation Configuration:"
+echo "Using Go binary: $GO_BINARY"
+echo "Dependency directory: $P_PATH"
+echo "Target executable: $BUILD"
+echo "Target OS: $OS, ARCH: $ARCH"
+echo "Compilation Mode: $C_OPTS"
+echo "Compression Mode: $P_OPTS"
+
+if [ $ARCH == "arm" ]; then
+  ARCH_OPTS="GOARM=7"
+  echo "ARM Mode: 7"
+fi
+
+if [ "$VERBOSE" == true ]; then
+  C_OPTS="-v $C_OPTS"
+  P_OPTS=`echo $P_OPTS | sed -e 's/-q//'`
+fi
+
+echo "###################################################"
+
+if [ "$CLEAN" == true ]; then
+  execute "Cleaning target..." "rm -rf $TARGET && rm -rf pkg"
+fi
+
+if [ "$CLEAN_DEPS" == true ]; then
+  execute "Cleaning dependencies..." "rm -rf $P_PATH"
+fi
+
+if [ "$UPDATING" == true ]; then
+  execute "Updating dependencies..." "CGO_ENABLED=1 GOPATH=$P_PATH:$SRC_PATH GOARCH=$ARCH GOOS=$OS $GO_BINARY get $BTAGS -v -d example/main"
+fi
+
+execute "Compiling..." "cd src && CGO_ENABLED=1 $CGO_LIBS $CGO_HEADERS GOPATH=$P_PATH:$SRC_PATH GOARCH=$ARCH GOOS=$OS $ARCH_OPTS $GO_BINARY build $V_FLAG -o $BUILD $C_OPTS $BTAGS example/main"
+
+if [ "$RACE" == true ]; then
+execute "Race condition tests" "CGO_ENABLED=1 $CGO_LIBS $CGO_HEADERS GOPATH=$P_PATH:$SRC_PATH GOARCH=$ARCH GOOS=$OS $ARCH_OPTS $GO_BINARY test --race $V_FLAG $C_OPTS $BTAGS example/main"
+fi
+
+if [ "$PACK" == true ]; then
+  execute "Compressing..." "upx $P_OPTS $BUILD"
+fi
+
+echo
+FSIZE=`wc -c $BUILD | awk 'BEGIN{mega=1048576} $1 >= mega {$1 = $1/mega "MB"} {print $1}'`
+echo "Compilation finished: $OUT -> $FSIZE"

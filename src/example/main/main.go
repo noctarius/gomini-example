@@ -6,12 +6,16 @@ import (
 	"github.com/labstack/echo/middleware"
 	"github.com/spf13/afero"
 	"path/filepath"
-	"log"
 	"example"
 	"os"
+	"github.com/apex/log"
+	"github.com/apex/log/handlers/text"
 )
 
 func main() {
+	log.SetHandler(text.Default)
+	log.SetLevel(log.DebugLevel)
+
 	// Create new http server
 	e := echo.New()
 
@@ -24,7 +28,7 @@ func main() {
 	// Build basic filesystem
 	base, err := filepath.Abs(".")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 
 	basePath := filepath.Join(base, "scripting", "scripts")
@@ -38,27 +42,30 @@ func main() {
 
 	kernel, err := gomini.NewScriptKernel(afero.NewOsFs(), kernelfs, true)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 
 	if err := kernel.LoadKernelModule(example.NewHttpKernelModule(e)); err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 
 	if err := kernel.LoadKernelModule(example.NewMeanKernelModule()); err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 
 	if err := kernel.EntryPoint("/main.ts"); err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 
 	if err := kernel.Start(); err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 
+	e.HideBanner = true
+	e.HidePort = true
+	log.Info("Main: Server started at [::]:8000")
 	if err := e.Start(":8000"); err != nil {
-		log.Fatal(err)
+		log.Fatal(err.Error())
 	}
 }
 

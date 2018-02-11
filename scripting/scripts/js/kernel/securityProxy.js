@@ -32,6 +32,10 @@
         })
     };
 
+    /*return function (object, adaptProperty, adaptFunction, adaptConstruct) {
+        
+    }*/
+    
     return function (object, adaptNull, adaptFunction, adaptArray, adaptObject, adaptProperty) {
         var properties = collectProperties(object);
         //debug(properties);

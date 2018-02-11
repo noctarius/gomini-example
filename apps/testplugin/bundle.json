@@ -1,0 +1,12 @@
+{
+  "id": "23b40c8e-5625-4572-b6a2-0b6b47f5a2a1",
+  "name": "test-kmodule",
+  "entrypoint": "/test.ts",
+  "privileges": [
+    "PRIVILEGE_KERNEL_MODULE"
+  ],
+  "kmodule": {
+    "native": "./test.so",
+    "definition": "./test.d.ts"
+  }
+}
