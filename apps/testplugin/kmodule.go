@@ -8,7 +8,7 @@ import (
 )
 
 // // No C code required.
-//import "C"
+// import "C"
 
 type File interface {
 	io.Closer
@@ -185,7 +185,7 @@ func (moduleDefinition) ExtensionBinder() ExtensionBinder {
 	}
 }
 
-//export
+//export KLoad
 func KLoad() (KernelModuleDefinition, error) {
 	return &moduleDefinition{}, nil
 }

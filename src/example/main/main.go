@@ -40,7 +40,7 @@ func main() {
 
 	kernelfs := buildKernelFilesystem(basePath, typesPath, appsPath, cachePath)
 
-	kernel, err := gomini.NewScriptKernel(afero.NewOsFs(), kernelfs, true)
+	kernel, err := gomini.NewScriptKernel(afero.NewOsFs(), kernelfs, nil)
 	if err != nil {
 		log.Fatal(err.Error())
 	}

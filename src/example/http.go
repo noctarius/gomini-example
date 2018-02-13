@@ -58,13 +58,13 @@ func (hkm *httpKernelModule) SecurityInterceptor() gomini.SecurityInterceptor {
 	}
 }
 
-func (hkm *httpKernelModule) ExtensionBinder() gomini.ExtensionBinder {
-	return func(bundle gomini.Bundle, moduleBuilder gomini.ModuleBuilder) {
-		moduleBuilder.
+func (hkm *httpKernelModule) KernelModuleBinder() gomini.KernelModuleBinder {
+	return func(bundle gomini.Bundle, builder gomini.ApiBuilder) {
+		builder.
 			DefineFunction("registerRequestHandler", hkm.jsRegisterRequestHandler(bundle)).
 			DefineObject("RequestMethod", hkm.jsRequestMethod).
 			DefineObject("ResponseCode", hkm.jsResponseCode).
-			EndModule()
+			EndApi()
 	}
 }
 

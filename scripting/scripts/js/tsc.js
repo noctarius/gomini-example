@@ -1,3 +1,4 @@
+tsVersion(ts.version);
 function transpiler(source) {
     var result = ts.transpileModule(source, {
         compilerOptions: {
