@@ -3,6 +3,7 @@
   "name": "test-bundle",
   "entrypoint": "/mybundle.ts",
   "privileges": [
-    "PRIVILEGE_HTTP"
+    "PRIVILEGE_HTTP",
+    "PRIVILEGE_LOGGER"
   ]
 }

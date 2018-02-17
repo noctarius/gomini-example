@@ -6,7 +6,15 @@
     "noImplicitAny": false,
     "alwaysStrict": true,
     "diagnostics": true,
+    "strictPropertyInitialization": true,
+    "allowJs": false,
+    "downlevelIteration": true,
+    "noLib": true,
+
     "baseUrl": "./scripting",
+    "lib": [
+      "lib/libbase.d.ts"
+    ],
     "typeRoots": [
       "@types/"
     ],

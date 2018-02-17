@@ -1,9 +1,12 @@
 import * as http from "http"
-import {Foo} from "./testdir/test123";
+import {Foo,Test} from "./testdir/test123";
+import * as test2 from "./testdir/test321";
 
 console.log("Register /external from my external test app :-)");
 http.registerRequestHandler("/external", http.RequestMethod.GET, (context) => {
         console.stackTrace();
+        new test2.obj();
+        new Test();
         return context.response.respondWithString(http.ResponseCode.OK, new Foo().func())
     }
 );

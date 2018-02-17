@@ -10,6 +10,7 @@ import (
 	"os"
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/text"
+	"github.com/relationsone/gomini/kmodules"
 )
 
 func main() {
@@ -50,6 +51,10 @@ func main() {
 	}
 
 	if err := kernel.LoadKernelModule(example.NewMeanKernelModule()); err != nil {
+		log.Fatal(err.Error())
+	}
+
+	if err := kernel.LoadKernelModule(kmodules.NewLoggerModule()); err != nil {
 		log.Fatal(err.Error())
 	}
 
