@@ -1,10 +1,13 @@
 tsVersion(ts.version);
+
 function transpiler(source) {
     var result = ts.transpileModule(source, {
         compilerOptions: {
             moduleResolution: "node",
-            module: "system",
+            module: "System",
             target: "es5",
+            isolatedModules: true,
+            importHelpers: true,
             tsconfig: false,
             noImplicitAny: false,
             alwaysStrict: true,
@@ -14,14 +17,21 @@ function transpiler(source) {
             allowJs: false,
             downlevelIteration: true,
             noLib: true,
+            declaration: true,
             typeRoots: [
                 "scripts/types"
             ],
             lib: [
                 "lib/libbase.d.ts"
             ]
-        }
+        },
+        reportDiagnostics: true,
+        transformers: []
     });
+
+    for (var i = 0; i < result.diagnostics.length; i++) {
+        ts.sys.write(result.diagnostics[i]);
+    }
 
     return result.outputText;
 }

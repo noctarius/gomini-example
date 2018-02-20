@@ -1,5 +1,5 @@
 export namespace test {
-    export class obj {
+    export class Obje {
 
     }
 }

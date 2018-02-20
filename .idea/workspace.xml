@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e4b6426-25e1-4a37-8a92-fcabc0768b53" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/noctarius.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/test/testdir/test321.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js_protocol.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripting/@types/logger.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripting/lib/libbase.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/test/bundle.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/test/bundle.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/test/mybundle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/test/mybundle.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/test/testdir/test123.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/test/testdir/test123.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripting/@types/files.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripting/@types/files.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/test/testdir/test321.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/test/testdir/test321.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripting/scripts/js/tsc.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripting/scripts/js/tsc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/example/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/example/main/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripting/scripts/js/typescript.js.bz2" beforeDir="false" afterPath="$PROJECT_DIR$/scripting/scripts/js/typescript.js.bz2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/dop251/goja" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/dop251/goja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/github.com/relationsone/gomini" beforeDir="false" afterPath="$PROJECT_DIR$/src/github.com/relationsone/gomini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,23 +20,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="kernel.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel.go">
+      <file leaf-file-name="tsc.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripting/scripts/js/tsc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="303" column="73" selection-start-line="303" selection-start-column="73" selection-end-line="303" selection-end-column="73" />
+            <state relative-caret-position="60">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apibuilder.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/apibuilder.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3585">
+              <caret line="244" column="44" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mybundle.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/test/mybundle.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
               <folding>
-                <element signature="e#16#285#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/module.go">
+      <file leaf-file-name="test321.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/test/testdir/test321.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="15">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="a74138914ac6128e67ded3927fb5dd7f3de955115d965212580ab8df681f016a" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/cache/a74138914ac6128e67ded3927fb5dd7f3de955115d965212580ab8df681f016a">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bundle.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundle.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bundlebuiltin.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlebuiltin.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -55,6 +93,7 @@
       <list>
         <option value="Go File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -76,7 +115,6 @@
       <find>log.</find>
       <find>log</find>
       <find>sour</find>
-      <find>set</find>
       <find>ToValue(</find>
       <find>Set</find>
       <find>call</find>
@@ -90,6 +128,7 @@
       <find>Property</find>
       <find>PropertyDe</find>
       <find>Com</find>
+      <find>set</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -114,44 +153,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/testplugin/kmodule.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/modulebuilder.go" />
-        <option value="$PROJECT_DIR$/src/example/mean.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/apibuilder.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlebuiltin.go" />
-        <option value="$PROJECT_DIR$/scripting/scripts/js/kernel/system.js" />
-        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/value.go" />
-        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/compiler_expr.go" />
-        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/parser/statement.go" />
-        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/parser/expression.go" />
-        <option value="$PROJECT_DIR$/target/cache/cache.json" />
-        <option value="$PROJECT_DIR$/scripting/@types/files.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/vfs.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/api_vfs.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/test.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/transpiler.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlemanager.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/securityproxy.go" />
-        <option value="$PROJECT_DIR$/scripting/@types/files.d.ts" />
-        <option value="$PROJECT_DIR$/scripting/@types/base.d.ts.go" />
-        <option value="$PROJECT_DIR$/scripting/@types/libbase.d.ts" />
-        <option value="$PROJECT_DIR$/src/github.com/apex/log/handlers/text/text.go" />
-        <option value="$PROJECT_DIR$/js_protocol.json" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/debugger.go" />
-        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/runtime.go" />
         <option value="$PROJECT_DIR$/src/github.com/dop251/goja/object.go" />
         <option value="$PROJECT_DIR$/src/github.com/dop251/goja/debugger/runtime/test.json" />
         <option value="$PROJECT_DIR$/src/github.com/dop251/goja/debugger/runtime/runtime.go" />
         <option value="$PROJECT_DIR$/src/github.com/dop251/goja/debugger/domain.go" />
         <option value="$PROJECT_DIR$/src/github.com/dop251/goja/debugger/runtime/domain.go" />
         <option value="$PROJECT_DIR$/src/github.com/dop251/goja/debugger.go" />
-        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/vm.go" />
         <option value="$PROJECT_DIR$/src/github.com/dop251/goja/programdumper.go" />
         <option value="$PROJECT_DIR$/scripting/@types/logger.go" />
         <option value="$PROJECT_DIR$/scripting/@types/logger.ts" />
         <option value="$PROJECT_DIR$/scripting/lib/libbase.d.ts" />
         <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/api.go" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/bundle.go" />
         <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/utils.go" />
         <option value="$PROJECT_DIR$/apps/test/bundle.json" />
         <option value="$PROJECT_DIR$/src/example/main/main.go" />
@@ -160,11 +172,38 @@
         <option value="$PROJECT_DIR$/scripting/@types/logger.d.ts" />
         <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/kmodules/logger.go" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/scripting/scripts/js/tsc.js" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel.go" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel_internal.go" />
+        <option value="$PROJECT_DIR$/scripting/@types/typescript.d.ts.go" />
+        <option value="$PROJECT_DIR$/scripting/@types/typescript.d.ts" />
+        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/parser/statement.go" />
+        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/srcfile.go" />
+        <option value="$PROJECT_DIR$/tstest/@types/test.d.ts" />
+        <option value="$PROJECT_DIR$/scripting/scripts/transformer.ts" />
+        <option value="$PROJECT_DIR$/tstest/tsconfig.json" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/transpiler.go" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlemanager_internal.go" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlemanager.go" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/securityproxy.go" />
         <option value="$PROJECT_DIR$/apps/test/testdir/test123.ts" />
+        <option value="$PROJECT_DIR$/tstest/test2.ts" />
+        <option value="$PROJECT_DIR$/tstest/test1.ts" />
+        <option value="$PROJECT_DIR$/tstest/customcompiler.js" />
+        <option value="$PROJECT_DIR$/scripting/scripts/js/tsc.js" />
+        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/vm.go" />
+        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/builtin_object.go" />
+        <option value="$PROJECT_DIR$/test/test.ts" />
+        <option value="$PROJECT_DIR$/apps/bug/test.ts" />
+        <option value="$PROJECT_DIR$/apps/bug/bundle.json" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/transpiler_internal.go" />
+        <option value="$PROJECT_DIR$/apps/bug/test1.js" />
+        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/parser/expression.go" />
+        <option value="$PROJECT_DIR$/src/github.com/dop251/goja/runtime.go" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/bundle.go" />
         <option value="$PROJECT_DIR$/apps/test/testdir/test321.ts" />
         <option value="$PROJECT_DIR$/apps/test/mybundle.ts" />
-        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel.go" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/apibuilder.go" />
+        <option value="$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlebuiltin.go" />
       </list>
     </option>
   </component>
@@ -205,32 +244,7 @@
             <path>
               <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
               <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="testdir" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="testplugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
               <item name="scripting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
-              <item name="scripting" type="462c0819:PsiDirectoryNode" />
-              <item name="@types" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
-              <item name="scripting" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
@@ -244,14 +258,6 @@
               <item name="scripting" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
-              <item name="scripting" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="kernel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
@@ -282,6 +288,13 @@
               <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="dop251" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
               <item name="relationsone" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -295,11 +308,13 @@
             <path>
               <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
               <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="relationsone" type="462c0819:PsiDirectoryNode" />
-              <item name="gomini" type="462c0819:PsiDirectoryNode" />
-              <item name="kmodules" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gomini-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gomini-example" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,23 +331,23 @@
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/bug" />
+      <recent name="$PROJECT_DIR$/tstest" />
+      <recent name="$PROJECT_DIR$/scripting/scripts/js" />
       <recent name="$PROJECT_DIR$/scripting/@types" />
       <recent name="$PROJECT_DIR$/src/github.com/relationsone/gomini" />
-      <recent name="$PROJECT_DIR$/apps/testplugin" />
-      <recent name="$PROJECT_DIR$/scripting/scripts/js/kernel" />
-      <recent name="$PROJECT_DIR$/scripting/scripts/kernel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps" />
+      <recent name="$PROJECT_DIR$/scripting/scripts" />
+      <recent name="$PROJECT_DIR$/scripting/scripts/js" />
       <recent name="$PROJECT_DIR$/src/github.com/dop251/goja" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/scripting/lib" />
-      <recent name="$PROJECT_DIR$/apps/test/testdir" />
-      <recent name="$PROJECT_DIR$/scripting" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -384,24 +399,24 @@
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4922179" visible="true" weight="0.175" />
+      <window_info anchor="bottom" id="TypeScript" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48884758" visible="true" weight="0.175" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32958034" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.53846157" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41743588" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="Structure" order="1" sideWeight="0.5077821" side_tool="true" weight="0.175" />
+      <window_info id="Structure" order="1" sideWeight="0.5111524" side_tool="true" weight="0.175" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5977482" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4482051" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32958034" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +424,9 @@
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/apps/testplugin/test.d.ts" />
+        <option value="$PROJECT_DIR$/apps/test/testdir/test321.js" />
+        <option value="$PROJECT_DIR$/apps/test/testdir/test123.js" />
+        <option value="$PROJECT_DIR$/apps/test/mybundle.js" />
       </list>
     </option>
   </component>
@@ -424,24 +442,69 @@
           <option name="timeStamp" value="156" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/src/github.com/dop251/goja/debugger.go</url>
-          <line>49</line>
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kmodules/logger.go</url>
           <line>57</line>
           <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel_internal.go</url>
+          <line>31</line>
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/github.com/dop251/goja/vm.go</url>
+          <line>969</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/github.com/dop251/goja/vm.go</url>
+          <line>332</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/src/github.com/dop251/goja/vm.go</url>
+          <line>360</line>
+          <option name="timeStamp" value="188" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="165" />
+      <option name="time" value="197" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>vm.stack[vm.sp]</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>vm.stack[vm.sp-1]</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>vm.stack[vm.sb+vm.args+s]</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>vm.stack[vm.sp-n-1]</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>vm.stack[vm.sp-n-2]</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dependentModule == nil</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>self.scope</expression-string>
         <language-id>go</language-id>
@@ -457,387 +520,332 @@
         <language-id>go</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>self.scope.declarationList[1]</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>m - n</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>c.Name()</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>prg.src.src</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/builtin_array.go">
+    <entry file="file://$PROJECT_DIR$/tstest/tsconfig.json" />
+    <entry file="file://$PROJECT_DIR$/scripting/scripts/typescript.d.ts2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="799" column="19" lean-forward="true" selection-start-line="799" selection-start-column="19" selection-end-line="799" selection-end-column="19" />
+        <state relative-caret-position="339">
+          <caret line="2379" column="13" lean-forward="true" selection-start-line="2379" selection-start-column="13" selection-end-line="2379" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlemanager.go">
+    <entry file="file://$PROJECT_DIR$/target/cache/b85e0f0f0ab2df8b41ca4538a39109280caea673311d5d8633a83bf474ade46d">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="159" column="23" selection-start-line="159" selection-start-column="23" selection-end-line="159" selection-end-column="23" />
+        <state relative-caret-position="135">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js_protocol.json">
+    <entry file="file://$PROJECT_DIR$/target/cache/0f65b6da9ad13cd2c42302e0516987ea1a24545095aa6413f5c3a076fe65cf1f">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="2176" column="45" selection-start-line="2176" selection-start-column="29" selection-end-line="2176" selection-end-column="45" />
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/net/http/fcgi/child.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kernelfs.go" />
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/securityproxy.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="290" column="18" selection-start-line="290" selection-start-column="18" selection-end-line="290" selection-end-column="18" />
+        <state relative-caret-position="1845">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/net/http/h2_bundle.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/resourceloader.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="5474" column="26" selection-start-line="5474" selection-start-column="26" selection-end-line="5474" selection-end-column="26" />
+        <state relative-caret-position="165">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/net/http/cgi/child.go">
+    <entry file="file://$PROJECT_DIR$/tstest/test1.js" />
+    <entry file="file://$PROJECT_DIR$/tstest/node_modules/typescript/lib/typescript.d.ts" />
+    <entry file="file://$PROJECT_DIR$/tstest/test2.ts" />
+    <entry file="file://$PROJECT_DIR$/tstest/test1.ts" />
+    <entry file="file://$PROJECT_DIR$/tstest/customcompiler.js" />
+    <entry file="file://$PROJECT_DIR$/apps/test/testdir/test123.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="158" column="18" selection-start-line="158" selection-start-column="18" selection-end-line="158" selection-end-column="18" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/context/context.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/proxy.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
-          <caret line="205" column="5" selection-start-line="205" selection-start-column="5" selection-end-line="205" selection-end-column="5" />
+        <state relative-caret-position="287">
+          <caret line="517" column="25" selection-start-line="517" selection-start-column="25" selection-end-line="517" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/cmd/vendor/github.com/google/pprof/internal/driver/webui.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/builtin_object.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="147" column="28" selection-start-line="147" selection-start-column="28" selection-end-line="147" selection-end-column="28" />
+        <state relative-caret-position="260">
+          <caret line="368" column="25" lean-forward="true" selection-start-line="368" selection-start-column="25" selection-end-line="368" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/stretchr/testify/assert/http_assertions.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/transpiler.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="567">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/stretchr/testify/assert/assertion_format.go">
+    <entry file="file:///usr/local/go/src/fmt/print.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="161" column="18" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+        <state relative-caret-position="201">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/object.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="268">
+          <caret line="254" selection-start-line="254" selection-end-line="254" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/debugger/runtime/test.json" />
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/array.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/builtin_function.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/debugger/domain.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="266" column="23" selection-start-line="266" selection-start-column="23" selection-end-line="266" selection-end-column="23" />
+        <state relative-caret-position="171">
+          <caret line="148" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/net/tcpsock.go">
+    <entry file="file://$PROJECT_DIR$/apps/bug/test.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="262" selection-start-line="262" selection-end-line="262" />
+        <state relative-caret-position="75">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/sync/atomic/value.go">
+    <entry file="file://$PROJECT_DIR$/target/cache/55f0cb3ef109308d6cfce6bd6badd354a5440e0ffb15feee964d201b2922df12">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="225">
+          <caret line="15" column="12" selection-end-line="25" selection-end-column="758" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/net/http/server.go">
+    <entry file="file://$PROJECT_DIR$/apps/bug/bundle.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="2770" selection-start-line="2770" selection-end-line="2770" />
+        <state relative-caret-position="45">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/builtin_typedarrays.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel_internal.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-717" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/debugger/runtime/domain.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="166" column="26" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
+        <state relative-caret-position="208">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/debugger.go">
+    <entry file="file:///usr/local/go/src/sync/map.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#14#43#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="163">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/parser/parser.go">
+    <entry file="file:///usr/local/go/src/reflect/type.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="259" column="30" selection-start-line="259" selection-start-column="30" selection-end-line="259" selection-end-column="30" />
+        <state relative-caret-position="163">
+          <caret line="827" selection-start-line="827" selection-end-line="827" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/file/file.go">
+    <entry file="file:///usr/local/go/src/runtime/mbarrier.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+        <state relative-caret-position="321">
+          <caret line="274" selection-start-line="274" selection-end-line="274" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/encoding/binary/binary.go">
+    <entry file="file:///usr/local/go/src/reflect/value.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="259" column="5" selection-start-line="259" selection-start-column="5" selection-end-line="259" selection-end-column="5" />
+        <state relative-caret-position="163">
+          <caret line="446" selection-start-line="446" selection-end-line="446" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/go-1.10/src/builtin/builtin.go">
+    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="182" column="37" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/programdumper.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="771" column="37" selection-start-line="771" selection-start-column="37" selection-end-line="771" selection-end-column="37" />
-          <folding>
-            <element signature="e#14#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripting/@types/logger.go" />
-    <entry file="file://$PROJECT_DIR$/src/github.com/apex/log/handlers/text/text.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="69" column="41" selection-start-line="69" selection-start-column="41" selection-end-line="69" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/apex/log/levels.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="171">
+          <caret line="502" selection-start-line="502" selection-end-line="502" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripting/lib/libbase.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19845">
-          <caret line="1323" selection-start-line="1323" selection-end-line="1323" />
+        <state relative-caret-position="199">
+          <caret line="1325" column="4" selection-start-line="1325" selection-start-column="4" selection-end-line="1325" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/api.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/func.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="247">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/main/main.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/transpiler_internal.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/test/bundle.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="510">
+          <caret line="43" column="10" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/utils.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="1185">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#16#233#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/example/http.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/value.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-658">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="6435">
+          <caret line="434" selection-start-line="434" selection-end-line="434" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/apibuilder.go">
+    <entry file="file://$PROJECT_DIR$/apps/bug/test1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripting/@types/logger.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/parser/expression.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        <state relative-caret-position="273">
+          <caret line="248" selection-start-line="248" selection-end-line="248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/vm.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="1136" selection-start-line="1136" selection-end-line="1136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+          <folding>
+            <element signature="e#16#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/api.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="123" column="4" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/runtime.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="938" selection-start-line="938" selection-end-line="938" />
+        <state relative-caret-position="335">
+          <caret line="1151" column="35" selection-start-line="1151" selection-start-column="35" selection-end-line="1151" selection-end-column="35" />
           <folding>
             <element signature="e#14#185#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/dop251/goja/vm.go">
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlemanager_internal.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="313" selection-start-line="313" selection-end-line="313" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlebuiltin.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kmodules/logger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#18#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="8" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripting/scripts/js/tsc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/cache/b85e0f0f0ab2df8b41ca4538a39109280caea673311d5d8633a83bf474ade46d">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/test/testdir/test123.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/test/testdir/test321.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/cache/a12327d4fc04bf9d06103af49e4559e36fb6726fbc153eee8254b88a266fbec7">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/test/mybundle.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/cache/a74138914ac6128e67ded3927fb5dd7f3de955115d965212580ab8df681f016a">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        <state relative-caret-position="714">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundle.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="263" column="45" lean-forward="true" selection-start-line="263" selection-start-column="45" selection-end-line="263" selection-end-column="45" />
+        <state relative-caret-position="196">
+          <caret line="45" column="62" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/cache/a74138914ac6128e67ded3927fb5dd7f3de955115d965212580ab8df681f016a">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/test/testdir/test321.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/test/mybundle.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/apibuilder.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3585">
+          <caret line="244" column="44" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlemanager.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripting/scripts/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/module.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
+        <state relative-caret-position="-219">
           <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/kernel.go">
+    <entry file="file://$PROJECT_DIR$/src/example/main/main.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/github.com/relationsone/gomini/bundlebuiltin.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="303" column="73" selection-start-line="303" selection-start-column="73" selection-end-line="303" selection-end-column="73" />
-          <folding>
-            <element signature="e#16#285#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="249">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripting/scripts/js/tsc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>

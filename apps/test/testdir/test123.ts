@@ -1,4 +1,5 @@
-export class Test {}
+export class Test {
+}
 
 export class Foo {
     func(): string {
