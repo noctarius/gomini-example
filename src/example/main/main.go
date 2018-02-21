@@ -11,18 +11,19 @@ import (
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/text"
 	"github.com/relationsone/gomini/kmodules"
+	"time"
 )
 
 func main() {
 	log.SetHandler(text.Default)
-	log.SetLevel(log.DebugLevel)
+	log.SetLevel(log.InfoLevel)
 
 	// Create new http server
 	e := echo.New()
 
 	// Activate logging and exception handler
 	e.Use(
-		middleware.Logger(),
+		simpleLogger(),
 		middleware.Recover(),
 	)
 
@@ -102,4 +103,30 @@ func buildKernelFilesystem(basePath, typesPath, appsPath, cachePath string) afer
 	kernelfs.Mount(cachefs, "/kernel/cache")
 
 	return kernelfs
+}
+
+func simpleLogger() echo.MiddlewareFunc {
+	return func(next echo.HandlerFunc) echo.HandlerFunc {
+		return func(context echo.Context) (err error) {
+			request := context.Request()
+			response := context.Response()
+
+			start := time.Now()
+			if err = next(context); err != nil {
+				context.Error(err)
+			}
+			stop := time.Now()
+
+			path := request.URL.Path
+			if path == "" {
+				path = "/"
+			}
+
+			log.Debugf("request{time=%s, remoteip=%s, uri=%s, method=%s, status=%d, latency=%s}",
+				time.Now().Format(time.RFC3339Nano), context.RealIP(), request.RequestURI, request.Method,
+				response.Status, stop.Sub(start).String())
+
+			return
+		}
+	}
 }
