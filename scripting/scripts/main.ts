@@ -27,3 +27,9 @@ const foo = () => {
         throw "This is serious boy!"
     })
 };
+
+mean.test(
+    () => {
+        return () => "test12345"
+    }
+);

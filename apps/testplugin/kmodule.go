@@ -65,36 +65,36 @@ const (
 	FLAG_TRUE
 )
 
-type JsValue interface {
+type JsValue1 interface {
 	ToInteger() int64
 	String() string
 	ToFloat() float64
-	ToNumber() JsValue
+	ToNumber() JsValue1
 	ToBoolean() bool
-	SameAs(JsValue) bool
-	Equals(JsValue) bool
-	StrictEquals(JsValue) bool
+	SameAs(JsValue1) bool
+	Equals(JsValue1) bool
+	StrictEquals(JsValue1) bool
 	Export() interface{}
 	ExportType() reflect.Type
 }
 
-type JsObject interface {
-	DefineAccessorProperty(name string, getter, setter JsValue, configurable, enumerable Flag) error
-	DefineDataProperty(name string, value JsValue, writable, configurable, enumerable Flag) error
-	Equals(other JsValue) bool
+type JsObject1 interface {
+	DefineAccessorProperty(name string, getter, setter JsValue1, configurable, enumerable Flag) error
+	DefineDataProperty(name string, value JsValue1, writable, configurable, enumerable Flag) error
+	Equals(other JsValue1) bool
 	Export() interface{}
 	ExportType() reflect.Type
-	Get(name string) JsValue
+	Get(name string) JsValue1
 	Keys() []string
 	MarshalJSON() ([]byte, error)
-	SameAs(other JsValue) bool
+	SameAs(other JsValue1) bool
 	Set(name string, value interface{}) error
-	StrictEquals(other JsValue) bool
+	StrictEquals(other JsValue1) bool
 	String() string
 	ToBoolean() bool
 	ToFloat() float64
 	ToInteger() int64
-	ToNumber() JsValue
+	ToNumber() JsValue1
 }
 
 type Bundle interface {
@@ -103,18 +103,18 @@ type Bundle interface {
 	Privileged() bool
 	Privileges() []string
 	SecurityInterceptor() SecurityInterceptor
-	Export(value JsValue, target interface{}) error
+	Export(value JsValue1, target interface{}) error
 	Status() BundleStatus
 	Filesystem() Fs
 
-	NewObject() JsObject
-	NewException(err error) JsObject
-	ToValue(value interface{}) JsValue
+	NewObject() JsObject1
+	NewException(err error) JsObject1
+	ToValue(value interface{}) JsValue1
 	Define(property string, value interface{})
-	DefineProperty(object JsObject, property string, value interface{}, getter Getter, setter Setter)
-	DefineConstant(object JsObject, constant string, value interface{})
-	PropertyDescriptor(object JsObject, property string) (value interface{}, writable bool, getter Getter, setter Setter)
-	FreezeObject(object JsObject)
+	DefineProperty(object JsObject1, property string, value interface{}, getter Getter, setter Setter)
+	DefineConstant(object JsObject1, constant string, value interface{})
+	PropertyDescriptor(object JsObject1, property string) (value interface{}, writable bool, getter Getter, setter Setter)
+	FreezeObject(object JsObject1)
 }
 
 type SecurityInterceptor func(caller Bundle, property string) (accessGranted bool)

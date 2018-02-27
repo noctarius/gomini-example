@@ -3,12 +3,13 @@ package example
 import (
 	"github.com/relationsone/gomini"
 	"fmt"
+	"github.com/apex/log"
 )
 
 type meanKernelModule struct {
 }
 
-func NewMeanKernelModule() gomini.KernelModuleDefinition {
+func NewMeanKernelModule() gomini.KernelModule {
 	return &meanKernelModule{}
 }
 
@@ -31,10 +32,14 @@ func (*meanKernelModule) SecurityInterceptor() gomini.SecurityInterceptor {
 }
 
 func (*meanKernelModule) KernelModuleBinder() gomini.KernelModuleBinder {
-	return func(bundle gomini.Bundle, builder gomini.ApiBuilder) {
-		builder.DefineFunction("fail", func(callback func()) {
+	return func(bundle gomini.Bundle, builder gomini.JsObjectBuilder) {
+		builder.DefineGoFunction("fail", func(callback func()) {
 			fmt.Println("meanKernelModule: Just a quick go function call and going back into JS...")
 			callback()
-		}).EndApi()
+
+		}).DefineGoFunction("test", func(f func() func() gomini.JsValue) {
+			test := f()
+			log.Infof("test result: %s", test().String())
+		})
 	}
 }

@@ -1,5 +1,5 @@
 import * as http from "http"
-import {Foo,Test} from './testdir/test123';
+import {Foo, Test} from './testdir/test123';
 import * as test2 from "./testdir/test321";
 
 export class Test2 {

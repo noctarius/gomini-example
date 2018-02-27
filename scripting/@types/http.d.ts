@@ -1,12 +1,12 @@
 declare module "http" {
     export enum RequestMethod {
-        GET = 1,
+        GET  = 1,
         POST = 2
     }
 
     export enum ResponseCode {
-        OK = 200,
-        NotFound = 404,
+        OK                  = 200,
+        NotFound            = 404,
         InternalServerError = 500
     }
 

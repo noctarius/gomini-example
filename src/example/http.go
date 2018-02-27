@@ -9,7 +9,7 @@ import (
 	"github.com/go-errors/errors"
 )
 
-type requestHandler func(context *goja.Object) error
+type requestHandler func(context gomini.JsObject) error
 
 type RequestMethod int
 
@@ -35,7 +35,7 @@ type httpKernelModule struct {
 	e *echo.Echo
 }
 
-func NewHttpKernelModule(e *echo.Echo) gomini.KernelModuleDefinition {
+func NewHttpKernelModule(e *echo.Echo) gomini.KernelModule {
 	return &httpKernelModule{e}
 }
 
@@ -59,28 +59,25 @@ func (hkm *httpKernelModule) SecurityInterceptor() gomini.SecurityInterceptor {
 }
 
 func (hkm *httpKernelModule) KernelModuleBinder() gomini.KernelModuleBinder {
-	return func(bundle gomini.Bundle, builder gomini.ApiBuilder) {
+	return func(bundle gomini.Bundle, builder gomini.JsObjectBuilder) {
 		builder.
-			DefineFunction("registerRequestHandler", hkm.jsRegisterRequestHandler(bundle)).
-			DefineObject("RequestMethod", hkm.jsRequestMethod).
-			DefineObject("ResponseCode", hkm.jsResponseCode).
-			EndApi()
+			DefineGoFunction("registerRequestHandler", hkm.jsRegisterRequestHandler(bundle)).
+			DefineObjectProperty("RequestMethod", hkm.jsRequestMethod).
+			DefineObjectProperty("ResponseCode", hkm.jsResponseCode)
 	}
 }
 
-func (hkm *httpKernelModule) jsRequestMethod(builder gomini.ObjectBuilder) {
+func (hkm *httpKernelModule) jsRequestMethod(builder gomini.JsObjectBuilder) {
 	builder.
 		DefineConstant("GET", REQUEST_METHOD_GET).
-		DefineConstant("POST", REQUEST_METHOD_POST).
-		EndObject()
+		DefineConstant("POST", REQUEST_METHOD_POST)
 }
 
-func (hkm *httpKernelModule) jsResponseCode(builder gomini.ObjectBuilder) {
+func (hkm *httpKernelModule) jsResponseCode(builder gomini.JsObjectBuilder) {
 	builder.
 		DefineConstant("OK", OK).
 		DefineConstant("NotFound", NotFound).
-		DefineConstant("InternalServerError", InternalServerError).
-		EndObject()
+		DefineConstant("InternalServerError", InternalServerError)
 }
 
 func (hkm *httpKernelModule) jsRegisterRequestHandler(bundle gomini.Bundle) func(string, int, requestHandler) bool {
@@ -112,56 +109,56 @@ func (hkm *httpKernelModule) jsRegisterRequestHandler(bundle gomini.Bundle) func
 	}
 }
 
-func (hkm *httpKernelModule) jsRequestContext(bundle gomini.Bundle, context echo.Context) *goja.Object {
-	jsContext := bundle.NewObject()
+func (hkm *httpKernelModule) jsRequestContext(bundle gomini.Bundle, context echo.Context) gomini.JsObject {
+	jsContext := bundle.NewObjectBuilder("requestContext")
 
-	jsContext.Set("pathParam", func(key string) string {
+	jsContext.DefineGoFunction("pathParam", func(key string) string {
 		return context.Param(key)
 	})
 
-	jsContext.Set("queryParam", func(key string) string {
+	jsContext.DefineGoFunction("queryParam", func(key string) string {
 		return context.QueryParam(key)
 	})
 
-	jsContext.Set("formParam", func(key string) string {
+	jsContext.DefineGoFunction("formParam", func(key string) string {
 		return context.FormValue(key)
 	})
 
-	bundle.DefineConstant(jsContext, "request", hkm.jsRequest(bundle, context.Request()))
-	bundle.DefineConstant(jsContext, "response", hkm.jsResponse(bundle, context))
-	bundle.DefineConstant(jsContext, "path", context.Path())
+	jsContext.DefineConstant("request", hkm.jsRequest(bundle, context.Request()))
+	jsContext.DefineConstant("response", hkm.jsResponse(bundle, context))
+	jsContext.DefineConstant("path", context.Path())
 
-	return jsContext
+	return jsContext.Build()
 }
 
-func (hkm *httpKernelModule) jsRequest(bundle gomini.Bundle, request *http.Request) *goja.Object {
-	jsRequest := bundle.NewObject()
+func (hkm *httpKernelModule) jsRequest(bundle gomini.Bundle, request *http.Request) gomini.JsObject {
+	jsRequest := bundle.NewObjectBuilder("request")
 
-	jsRequest.Set("header", func(key string) string {
+	jsRequest.DefineGoFunction("header", func(key string) string {
 		return request.Header.Get(key)
 	})
 
-	bundle.DefineConstant(jsRequest, "method", hkm.findRequestMethodByName(request.Method))
-	bundle.DefineConstant(jsRequest, "url", request.URL.String())
-	bundle.DefineConstant(jsRequest, "protocol", request.Proto)
-	bundle.DefineConstant(jsRequest, "contentLength", request.ContentLength)
-	bundle.DefineConstant(jsRequest, "host", request.Host)
+	jsRequest.DefineConstant("method", hkm.findRequestMethodByName(request.Method))
+	jsRequest.DefineConstant("url", request.URL.String())
+	jsRequest.DefineConstant("protocol", request.Proto)
+	jsRequest.DefineConstant("contentLength", request.ContentLength)
+	jsRequest.DefineConstant("host", request.Host)
 
-	return jsRequest
+	return jsRequest.Build()
 }
 
-func (hkm *httpKernelModule) jsResponse(bundle gomini.Bundle, context echo.Context) *goja.Object {
-	jsResponse := bundle.NewObject()
+func (hkm *httpKernelModule) jsResponse(bundle gomini.Bundle, context echo.Context) gomini.JsObject {
+	jsResponse := bundle.NewObjectBuilder("response")
 
-	jsResponse.Set("respondWithString", func(responseCode ResponseCode, content string) error {
+	jsResponse.DefineGoFunction("respondWithString", func(responseCode ResponseCode, content string) error {
 		return context.String(int(responseCode), content)
 	})
 
-	jsResponse.Set("respondWithError", func(code ResponseCode) error {
+	jsResponse.DefineGoFunction("respondWithError", func(code ResponseCode) error {
 		return context.NoContent(int(code))
 	})
 
-	return jsResponse
+	return jsResponse.Build()
 }
 
 func (hkm *httpKernelModule) findRequestMethodByName(method string) RequestMethod {

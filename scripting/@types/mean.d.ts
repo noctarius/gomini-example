@@ -3,5 +3,7 @@ declare module "mean" {
         ()
     }
 
-    export function fail(callback:Callback)
+    export function fail(callback: Callback)
+
+    export function test(f: () => () => string)
 }
