@@ -2,7 +2,6 @@ package example
 
 import (
 	"github.com/relationsone/gomini"
-	"fmt"
 	"github.com/apex/log"
 )
 
@@ -32,12 +31,12 @@ func (*meanKernelModule) SecurityInterceptor() gomini.SecurityInterceptor {
 }
 
 func (*meanKernelModule) KernelModuleBinder() gomini.KernelModuleBinder {
-	return func(bundle gomini.Bundle, builder gomini.JsObjectBuilder) {
-		builder.DefineGoFunction("fail", func(callback func()) {
-			fmt.Println("meanKernelModule: Just a quick go function call and going back into JS...")
+	return func(bundle gomini.Bundle, builder gomini.ObjectBuilder) {
+		builder.DefineGoFunction("fail", "fail", func(callback func()) {
+			log.Info("meanKernelModule: Just a quick go function call and going back into JS...")
 			callback()
 
-		}).DefineGoFunction("test", func(f func() func() gomini.JsValue) {
+		}).DefineGoFunction("test", "test", func(f func() func() gomini.Value) {
 			test := f()
 			log.Infof("test result: %s", test().String())
 		})

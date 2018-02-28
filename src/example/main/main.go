@@ -12,6 +12,7 @@ import (
 	"github.com/apex/log/handlers/text"
 	"github.com/relationsone/gomini/kmodules"
 	"time"
+	"github.com/relationsone/gomini/sbgoja"
 )
 
 func main() {
@@ -42,7 +43,7 @@ func main() {
 
 	kernelfs := buildKernelFilesystem(basePath, typesPath, appsPath, cachePath)
 
-	kernel, err := gomini.NewScriptKernel(afero.NewOsFs(), kernelfs, nil)
+	kernel, err := gomini.NewScriptKernel(afero.NewOsFs(), kernelfs, sbgoja.NewSandbox, nil)
 	if err != nil {
 		log.Fatal(err.Error())
 	}

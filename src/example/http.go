@@ -9,7 +9,7 @@ import (
 	"github.com/go-errors/errors"
 )
 
-type requestHandler func(context gomini.JsObject) error
+type requestHandler func(context gomini.Object) error
 
 type RequestMethod int
 
@@ -59,21 +59,21 @@ func (hkm *httpKernelModule) SecurityInterceptor() gomini.SecurityInterceptor {
 }
 
 func (hkm *httpKernelModule) KernelModuleBinder() gomini.KernelModuleBinder {
-	return func(bundle gomini.Bundle, builder gomini.JsObjectBuilder) {
+	return func(bundle gomini.Bundle, builder gomini.ObjectBuilder) {
 		builder.
-			DefineGoFunction("registerRequestHandler", hkm.jsRegisterRequestHandler(bundle)).
+			DefineGoFunction("registerRequestHandler", "registerRequestHandler", hkm.jsRegisterRequestHandler(bundle)).
 			DefineObjectProperty("RequestMethod", hkm.jsRequestMethod).
 			DefineObjectProperty("ResponseCode", hkm.jsResponseCode)
 	}
 }
 
-func (hkm *httpKernelModule) jsRequestMethod(builder gomini.JsObjectBuilder) {
+func (hkm *httpKernelModule) jsRequestMethod(builder gomini.ObjectBuilder) {
 	builder.
 		DefineConstant("GET", REQUEST_METHOD_GET).
 		DefineConstant("POST", REQUEST_METHOD_POST)
 }
 
-func (hkm *httpKernelModule) jsResponseCode(builder gomini.JsObjectBuilder) {
+func (hkm *httpKernelModule) jsResponseCode(builder gomini.ObjectBuilder) {
 	builder.
 		DefineConstant("OK", OK).
 		DefineConstant("NotFound", NotFound).
@@ -109,18 +109,18 @@ func (hkm *httpKernelModule) jsRegisterRequestHandler(bundle gomini.Bundle) func
 	}
 }
 
-func (hkm *httpKernelModule) jsRequestContext(bundle gomini.Bundle, context echo.Context) gomini.JsObject {
+func (hkm *httpKernelModule) jsRequestContext(bundle gomini.Bundle, context echo.Context) gomini.Object {
 	jsContext := bundle.NewObjectBuilder("requestContext")
 
-	jsContext.DefineGoFunction("pathParam", func(key string) string {
+	jsContext.DefineGoFunction("pathParam", "pathParam", func(key string) string {
 		return context.Param(key)
 	})
 
-	jsContext.DefineGoFunction("queryParam", func(key string) string {
+	jsContext.DefineGoFunction("queryParam", "queryParam", func(key string) string {
 		return context.QueryParam(key)
 	})
 
-	jsContext.DefineGoFunction("formParam", func(key string) string {
+	jsContext.DefineGoFunction("formParam", "formParam", func(key string) string {
 		return context.FormValue(key)
 	})
 
@@ -131,10 +131,10 @@ func (hkm *httpKernelModule) jsRequestContext(bundle gomini.Bundle, context echo
 	return jsContext.Build()
 }
 
-func (hkm *httpKernelModule) jsRequest(bundle gomini.Bundle, request *http.Request) gomini.JsObject {
+func (hkm *httpKernelModule) jsRequest(bundle gomini.Bundle, request *http.Request) gomini.Object {
 	jsRequest := bundle.NewObjectBuilder("request")
 
-	jsRequest.DefineGoFunction("header", func(key string) string {
+	jsRequest.DefineGoFunction("header", "header", func(key string) string {
 		return request.Header.Get(key)
 	})
 
@@ -147,14 +147,14 @@ func (hkm *httpKernelModule) jsRequest(bundle gomini.Bundle, request *http.Reque
 	return jsRequest.Build()
 }
 
-func (hkm *httpKernelModule) jsResponse(bundle gomini.Bundle, context echo.Context) gomini.JsObject {
+func (hkm *httpKernelModule) jsResponse(bundle gomini.Bundle, context echo.Context) gomini.Object {
 	jsResponse := bundle.NewObjectBuilder("response")
 
-	jsResponse.DefineGoFunction("respondWithString", func(responseCode ResponseCode, content string) error {
+	jsResponse.DefineGoFunction("respondWithString", "respondWithString", func(responseCode ResponseCode, content string) error {
 		return context.String(int(responseCode), content)
 	})
 
-	jsResponse.DefineGoFunction("respondWithError", func(code ResponseCode) error {
+	jsResponse.DefineGoFunction("respondWithError", "respondWithError", func(code ResponseCode) error {
 		return context.NoContent(int(code))
 	})
 
